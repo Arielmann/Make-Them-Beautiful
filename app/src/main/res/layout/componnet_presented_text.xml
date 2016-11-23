@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/textViewLayout"
+    android:orientation="vertical">
+    <!-- Note: android:descendantFocusability="blocksDescendants" set to ensure that
+   OnItemClickListener works by ensuring constituent controls do not take focus -->
+
+    <TextView
+        android:id="@+id/presentedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="#ffe72f" />
+
+</RelativeLayout>
