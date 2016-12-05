@@ -25,17 +25,15 @@ public class OnSendButtonClicked implements View.OnClickListener {
 
     private Context context;
 
-
     public OnSendButtonClicked(Context context) {
         this.context = context;
         //onSendButtonClicked = (ChatScreen) this.context; //Should somehow apply to sent imges as well
     }
 
-
     @Override
     public void onClick(View v) { //provokes method in chatScreen
 
-     /*   //        for (int i = 0; i < filePathsArray.size() - 1; i++)
+     /*   //for (int i = 0; i < filePathsArray.size() - 1; i++)
         UploadData uploadData = new UploadData(context, FilePathsArray.getInstance().getArray().get(0)); //upload data should be created once and make asynctasks
         uploadData.execute();
         SqliteFileTable sqliteFileTable = new SqliteFileTable(context, 3);
