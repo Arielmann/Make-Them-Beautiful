@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.home.makethembeautiful.chat.model.AllConversationsHashMap;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.db_manager.DataBaseManager;
+import com.example.home.makethembeautiful.dbmanager.DataBaseManager;
 
 import java.util.ArrayList;
 import java.util.List;

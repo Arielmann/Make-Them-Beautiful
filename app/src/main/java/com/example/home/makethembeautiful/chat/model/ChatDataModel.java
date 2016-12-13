@@ -6,9 +6,9 @@ import android.util.Log;
 
 import com.example.home.makethembeautiful.chat.adapter.ChatAdapter;
 import com.example.home.makethembeautiful.chat.sqlite.ChatItemsTable;
-import com.example.home.makethembeautiful.contacted_users.sqlite.ContactedUsersTableWriter;
-import com.example.home.makethembeautiful.db_manager.DataBaseManager;
-import com.example.home.makethembeautiful.user_profile.profile_objects.User;
+import com.example.home.makethembeautiful.contactedusers.sqlite.ContactedUsersTableWriter;
+import com.example.home.makethembeautiful.dbmanager.DataBaseManager;
+import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 import java.util.List;
 

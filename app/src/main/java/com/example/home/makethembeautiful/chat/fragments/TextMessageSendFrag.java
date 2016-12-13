@@ -6,14 +6,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.OnTextTransferred;
 import com.example.home.makethembeautiful.chat.controllers.AddChatImageItemController;
-import com.example.home.makethembeautiful.user_profile.SharedPrefrences.SharedPrefManager;
+import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 
 /**
  * Created by home on 6/21/2016.

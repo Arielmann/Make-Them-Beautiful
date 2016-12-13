@@ -16,12 +16,12 @@ import com.example.home.makethembeautiful.chat.model.ChatItem;
 import com.example.home.makethembeautiful.chat.fragments.ChatFrag;
 import com.example.home.makethembeautiful.chat.controllers.ChatImagesController;
 import com.example.home.makethembeautiful.chat.controllers.ChatTextMessagesController;
-import com.example.home.makethembeautiful.image_providing.ChooseImageProvider;
-import com.example.home.makethembeautiful.image_providing.ImageLoader;
-import com.example.home.makethembeautiful.image_providing.ImageUtils;
-import com.example.home.makethembeautiful.image_providing.fragments.FullScreenImageViewFrag;
-import com.example.home.makethembeautiful.user_profile.SharedPrefrences.SharedPrefManager;
-import com.example.home.makethembeautiful.user_profile.profile_objects.User;
+import com.example.home.makethembeautiful.imageutils.ChooseImageProvider;
+import com.example.home.makethembeautiful.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.imageutils.fragments.FullScreenImageViewFrag;
+import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
+import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 import org.greenrobot.eventbus.EventBus;
 

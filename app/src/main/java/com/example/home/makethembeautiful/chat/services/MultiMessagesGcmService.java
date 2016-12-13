@@ -15,17 +15,17 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.example.home.makethembeautiful.R;
-import com.example.home.makethembeautiful.app_data_init.AppDataInit;
+import com.example.home.makethembeautiful.appinit.AppDataInit;
 import com.example.home.makethembeautiful.chat.ChatScreen;
 import com.example.home.makethembeautiful.chat.controllers.ChatImagesController;
 import com.example.home.makethembeautiful.chat.controllers.ChatTextMessagesController;
 import com.example.home.makethembeautiful.chat.model.ChatDataModel;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
 import com.example.home.makethembeautiful.chat.model.MessageItemsFromServer;
-import com.example.home.makethembeautiful.image_providing.ImageLoader;
-import com.example.home.makethembeautiful.image_providing.ImageUtils;
-import com.example.home.makethembeautiful.user_profile.SharedPrefrences.SharedPrefManager;
-import com.example.home.makethembeautiful.user_profile.profile_objects.User;
+import com.example.home.makethembeautiful.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
+import com.example.home.makethembeautiful.profile.profilemodels.User;
 import com.google.android.gms.gcm.GcmReceiver;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 

@@ -5,10 +5,10 @@ import android.net.Uri;
 
 import com.example.home.makethembeautiful.chat.model.ChatDataModel;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.contacted_users.model.ContactedUsersModel;
-import com.example.home.makethembeautiful.contacted_users.model.ContactedUsersRowsHashMap;
-import com.example.home.makethembeautiful.server_communication.SendMessagePushNotification;
-import com.example.home.makethembeautiful.user_profile.profile_objects.User;
+import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersModel;
+import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRowsHashMap;
+import com.example.home.makethembeautiful.servercommunication.SendMessagePushNotification;
+import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 /**
  * Created by home on 7/8/2016.

@@ -16,13 +16,13 @@
     <uses-permission android:name="your.package.name.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.example.home.makethembeautiful.app_data_init.MakeThemBeautiful"
+        android:name="com.example.home.makethembeautiful.appinit.MakeThemBeautiful"
         android:allowBackup="true"
         android:icon="@drawable/body_color_thumb_up_100"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user_profile.user_info.basic_info.RegisterBasicProfileScreen">
+        <activity android:name=".profile.registration.basic.RegisterBasicProfileScreen">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -33,27 +33,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".user_profile.ProfileInfoScreen"
+            android:name=".profile.ProfileInfoScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".user_profile.user_info.company_info.SetCompanyScreen"
+            android:name=".profile.registration.company.SetCompanyScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".user_profile.user_info.company_description.SetDescriptionScreen"
+            android:name=".profile.registration.description.SetDescriptionScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".user_profile.user_info.user_profile_image.SetProfileImageScreen"
+            android:name=".profile.registration.profileimage.SetProfileImageScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".user_profile.user_info.SettingsMainScreen"
+            android:name=".profile.registration.SettingsMainScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".contacted_users.ContactedUsersScreen"
+            android:name=".contactedusers.ContactedUsersScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity

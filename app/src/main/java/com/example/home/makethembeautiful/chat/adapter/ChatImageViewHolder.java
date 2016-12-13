@@ -6,13 +6,12 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.image_providing.ImageLoader;
-import com.example.home.makethembeautiful.image_providing.ImageUtils;
-import com.example.home.makethembeautiful.image_providing.OnImageClickedListener;
-import com.example.home.makethembeautiful.image_providing.OnImageLoadingError;
+import com.example.home.makethembeautiful.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.imageutils.OnImageClickedListener;
+import com.example.home.makethembeautiful.imageutils.OnImageLoadingError;
 
 import java.io.File;
 import java.util.List;
