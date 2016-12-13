@@ -44,8 +44,8 @@ public class SaveStylistToServerPushNotification extends AsyncTask<String, Void,
                 .addFormDataPart("company", userData.get("company"))
                 .addFormDataPart("location", userData.get("location"))
                 .addFormDataPart("website", userData.get("website"))
-                .addFormDataPart("profileImageUrl", userData.get("profileImageUrl"))
                 .addFormDataPart("description", userData.get("description"))
+                .addFormDataPart("profileImageUrl", userData.get("profileImageUrl"))
                 .addFormDataPart("gcmToken", userData.get("gcmToken"))
                 .build();
 
