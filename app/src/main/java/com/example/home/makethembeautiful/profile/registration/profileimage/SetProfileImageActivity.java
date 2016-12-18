@@ -6,15 +6,15 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.home.makethembeautiful.handlers.FragmentBuilder;
+import com.example.home.makethembeautiful.utils.handlers.FragmentBuilder;
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.imageutils.ChooseImageProvider;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.ChooseImageProvider;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 
 
-public class SetProfileImageScreen extends AppCompatActivity implements ChooseImageProvider, ImageLoader {
+public class SetProfileImageActivity extends AppCompatActivity implements ChooseImageProvider, ImageLoader {
 
     private SetProfileImageViewFrag imagePresenterFrag;
     private FragmentBuilder fragmentBuilder;  //FragmentBuilder is a LOCAL class

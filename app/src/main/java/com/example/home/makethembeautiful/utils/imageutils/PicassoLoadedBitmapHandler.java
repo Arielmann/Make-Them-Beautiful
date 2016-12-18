@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils;
+package com.example.home.makethembeautiful.utils.imageutils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

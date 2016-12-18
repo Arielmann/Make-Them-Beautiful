@@ -13,9 +13,9 @@ import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.adapter.GenericViewHolder;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRow;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
-import com.example.home.makethembeautiful.imageutils.OnImageLoadingError;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.OnImageLoadingError;
 
 import java.io.File;
 import java.sql.Date;

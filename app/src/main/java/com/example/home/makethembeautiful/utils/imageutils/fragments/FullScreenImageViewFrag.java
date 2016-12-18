@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils.fragments;
+package com.example.home.makethembeautiful.utils.imageutils.fragments;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;

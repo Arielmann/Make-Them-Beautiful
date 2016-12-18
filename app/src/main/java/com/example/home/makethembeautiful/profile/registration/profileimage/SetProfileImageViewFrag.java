@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.home.makethembeautiful.R;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 
 /**
  * Created by home on 8/5/2016.

@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils;
+package com.example.home.makethembeautiful.utils.imageutils;
 
 import android.app.Activity;
 import android.content.Context;

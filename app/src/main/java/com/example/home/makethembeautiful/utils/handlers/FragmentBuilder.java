@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.handlers;
+package com.example.home.makethembeautiful.utils.handlers;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".profile.registration.basic.RegisterBasicProfileScreen">
+        <activity android:name=".profile.registration.basic.RegisterBasicProfileActivity">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -37,15 +37,15 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".profile.registration.company.SetCompanyScreen"
+            android:name=".profile.registration.company.SetCompanyActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".profile.registration.description.SetDescriptionScreen"
+            android:name=".profile.registration.description.SetDescriptionActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".profile.registration.profileimage.SetProfileImageScreen"
+            android:name=".profile.registration.profileimage.SetProfileImageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
@@ -53,11 +53,11 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".contactedusers.ContactedUsersScreen"
+            android:name=".contactedusers.ContactedUsersActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".chat.ChatScreen"
+            android:name=".chat.ChatActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             />
@@ -65,7 +65,7 @@
 
         <!-- Define receiver for push notifications from GCM -->
         <receiver
-            android:name=".chat.broadcastReceivers.GcmReceiver"
+            android:name=".chat.broadcastreceivers.GcmReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND">

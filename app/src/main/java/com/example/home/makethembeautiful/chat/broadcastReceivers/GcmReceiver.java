@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.chat.broadcastReceivers;
+package com.example.home.makethembeautiful.chat.broadcastreceivers;
 
 import android.app.Activity;
 import android.content.ComponentName;

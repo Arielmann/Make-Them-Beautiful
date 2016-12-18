@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/teal_bg"
     android:orientation="vertical"
-    tools:context=".profile.registration.profileimage.SetProfileImageScreen">
+    tools:context=".profile.registration.profileimage.SetProfileImageActivity">
 
     <fragment
         android:id="@+id/setProfileImageFrag"

@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.onitemclickmethods;
+package com.example.home.makethembeautiful.utils.handlers;
 
 import android.app.Activity;
 import android.content.Intent;

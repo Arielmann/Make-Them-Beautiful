@@ -7,13 +7,13 @@ import android.util.Log;
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.appinit.AppDataInit;
 import com.example.home.makethembeautiful.contactedusers.fragments.ContactedUsersPresenterFrag;
-import com.example.home.makethembeautiful.gotoscreen.GoToScreen;
-import com.example.home.makethembeautiful.handlers.FragmentBuilder;
+import com.example.home.makethembeautiful.utils.handlers.GoToScreen;
+import com.example.home.makethembeautiful.utils.handlers.FragmentBuilder;
 import com.example.home.makethembeautiful.toolbar.ToolbarFrag;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
-import com.example.home.makethembeautiful.profile.registration.basic.RegisterBasicProfileScreen;
+import com.example.home.makethembeautiful.profile.registration.basic.RegisterBasicProfileActivity;
 
-public class ContactedUsersScreen extends AppCompatActivity{
+public class ContactedUsersActivity extends AppCompatActivity{
     private static final String CONTACTED_USERS_SCREEN = "Contacted users screen";
 
     /* will manage the whole process of
@@ -40,7 +40,7 @@ public class ContactedUsersScreen extends AppCompatActivity{
     }
 
     private void goToRegistrationScreen() {
-        GoToScreen goToRegistrationBasicProfileScreen = new GoToScreen(this, RegisterBasicProfileScreen.class);
+        GoToScreen goToRegistrationBasicProfileScreen = new GoToScreen(this, RegisterBasicProfileActivity.class);
         goToRegistrationBasicProfileScreen.onClick(null);
     }
 }

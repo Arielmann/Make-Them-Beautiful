@@ -9,6 +9,5 @@ public class MakeThemBeautiful extends MultiDexApplication {
 
     /*
     * Declared as app name in manifest to avoid class cast exception.
-    *
-    * */
+    */
 }

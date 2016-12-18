@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils.fragments.Dialogs;
+package com.example.home.makethembeautiful.utils.imageutils.fragments.Dialogs;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -6,9 +6,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 
-import com.example.home.makethembeautiful.imageutils.ChooseImageProvider;
-import com.example.home.makethembeautiful.imageutils.fragments.ChooseFromGalleryFrag;
-import com.example.home.makethembeautiful.imageutils.fragments.TakePhotoFrag;
+import com.example.home.makethembeautiful.utils.imageutils.ChooseImageProvider;
+import com.example.home.makethembeautiful.utils.imageutils.fragments.ChooseFromGalleryFrag;
+import com.example.home.makethembeautiful.utils.imageutils.fragments.TakePhotoFrag;
 
 /**
  * Created by home on 4/29/2016.

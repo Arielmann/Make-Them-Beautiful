@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils.fragments;
+package com.example.home.makethembeautiful.utils.imageutils.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 
 import java.io.Serializable;

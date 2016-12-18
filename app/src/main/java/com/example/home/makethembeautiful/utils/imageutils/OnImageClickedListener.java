@@ -1,12 +1,12 @@
-package com.example.home.makethembeautiful.imageutils;
+package com.example.home.makethembeautiful.utils.imageutils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
 
 import com.example.home.makethembeautiful.R;
-import com.example.home.makethembeautiful.handlers.FragmentBuilder;
-import com.example.home.makethembeautiful.imageutils.fragments.FullScreenImageViewFrag;
+import com.example.home.makethembeautiful.utils.handlers.FragmentBuilder;
+import com.example.home.makethembeautiful.utils.imageutils.fragments.FullScreenImageViewFrag;
 
 import org.greenrobot.eventbus.EventBus;
 

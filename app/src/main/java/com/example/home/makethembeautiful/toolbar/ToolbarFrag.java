@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.contactedusers.ContactedUsersScreen;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.OnImageLoadingError;
+import com.example.home.makethembeautiful.contactedusers.ContactedUsersActivity;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.OnImageLoadingError;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -46,7 +46,7 @@ public class ToolbarFrag extends Fragment implements ImageLoader, OnImageLoading
     }
 
     public void createDrawer() {
-        goToContactedUsersScreen = new GoToScreenFromDrawerItem(getActivity(), ContactedUsersScreen.class);
+        goToContactedUsersScreen = new GoToScreenFromDrawerItem(getActivity(), ContactedUsersActivity.class);
         toolbar = (Toolbar) toolbarLayout.findViewById(R.id.customToolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setSubtitle(null);

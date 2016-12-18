@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.home.makethembeautiful.R;
-import com.example.home.makethembeautiful.contactedusers.ContactedUsersScreen;
-import com.example.home.makethembeautiful.gotoscreen.GoToScreen;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
-import com.example.home.makethembeautiful.imageutils.fragments.Dialogs.ChooseImageSourceDialog;
+import com.example.home.makethembeautiful.contactedusers.ContactedUsersActivity;
+import com.example.home.makethembeautiful.utils.handlers.GoToScreen;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.fragments.Dialogs.ChooseImageSourceDialog;
 import com.example.home.makethembeautiful.servercommunication.OnImageUploadedToServer;
 import com.example.home.makethembeautiful.servercommunication.OnPushNotificationSent;
 import com.example.home.makethembeautiful.servercommunication.SaveStylistToServerPushNotification;
@@ -89,7 +89,7 @@ public class SetProfileImageModel implements View.OnClickListener, OnImageUpload
     @Override
     public void onPushSuccess() {
         progressDialog.dismiss();
-        final GoToScreen goToContactedUsersScreen = new GoToScreen((Activity) activity, ContactedUsersScreen.class);
+        final GoToScreen goToContactedUsersScreen = new GoToScreen((Activity) activity, ContactedUsersActivity.class);
         goToContactedUsersScreen.onClick(null);
     }
 

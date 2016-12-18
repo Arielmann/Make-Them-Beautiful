@@ -1,23 +1,23 @@
-package com.example.home.makethembeautiful.imageutils;
+package com.example.home.makethembeautiful.utils.imageutils;
 
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
+import com.example.home.makethembeautiful.profile.profilemodels.User;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 /**
  * Created by home on 8/24/2016.
  */
-public class PicassoChatImageTarget extends PicassoLoadedBitmapHandler implements Target {
+public class PicassoProfileImageTarget extends PicassoLoadedBitmapHandler implements Target {
 
     private int counter;
-    private String senderName;
 
-    public PicassoChatImageTarget(Context context, ImageLoader interfaceHolder, String senderName, String url) {
-        super(context, interfaceHolder, senderName, url);
+    public PicassoProfileImageTarget(Context context, ImageLoader interfaceHolder, User user, String url) {
+        super(context, interfaceHolder, user, url);
     }
 
     @Override
@@ -29,12 +29,14 @@ public class PicassoChatImageTarget extends PicassoLoadedBitmapHandler implement
     @Override
     public void onBitmapFailed(Drawable errorDrawable) {
         if (counter > 5) {
-            ImageUtils.downloadChatImage(super.getContext(),
+            ImageUtils.downloadProfileImage(super.getContext(),
                     super.getLoader(),
-                    senderName, super.getUrl());
+                    super.getUser(),
+                    super.getUrl());
             counter++;
         }
     }
+
 
     @Override
     public void onPrepareLoad(Drawable placeHolderDrawable) {

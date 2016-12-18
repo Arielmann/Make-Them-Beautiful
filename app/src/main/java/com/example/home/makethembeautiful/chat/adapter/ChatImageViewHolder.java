@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.home.makethembeautiful.chat.model.ChatItem;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
-import com.example.home.makethembeautiful.imageutils.OnImageClickedListener;
-import com.example.home.makethembeautiful.imageutils.OnImageLoadingError;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.OnImageClickedListener;
+import com.example.home.makethembeautiful.utils.imageutils.OnImageLoadingError;
 
 import java.io.File;
 import java.util.List;

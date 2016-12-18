@@ -1,4 +1,4 @@
-package com.example.home.makethembeautiful.imageutils;
+package com.example.home.makethembeautiful.utils.imageutils;
 
 /**
  * Created by home on 9/6/2016.

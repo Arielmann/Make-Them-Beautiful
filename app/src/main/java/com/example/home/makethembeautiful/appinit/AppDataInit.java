@@ -8,7 +8,7 @@ import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.model.AllConversationsHashMap;
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersModel;
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRowsHashMap;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 import com.sromku.simple.storage.SimpleStorage;
 import com.sromku.simple.storage.Storage;
 

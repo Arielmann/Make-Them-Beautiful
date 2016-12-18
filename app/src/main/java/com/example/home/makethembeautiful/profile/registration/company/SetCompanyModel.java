@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.example.home.makethembeautiful.profile.registration.GenericSettingsModel;
-import com.example.home.makethembeautiful.profile.registration.description.SetDescriptionScreen;
+import com.example.home.makethembeautiful.profile.registration.description.SetDescriptionActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -70,7 +70,7 @@ public class SetCompanyModel extends GenericSettingsModel {
 
     @Override
     public void goToNextScreen() {
-        Intent goToContactedUsersScreen = new Intent(getContext(), SetDescriptionScreen.class);
+        Intent goToContactedUsersScreen = new Intent(getContext(), SetDescriptionActivity.class);
         getContext().startActivity(goToContactedUsersScreen);
     }
 

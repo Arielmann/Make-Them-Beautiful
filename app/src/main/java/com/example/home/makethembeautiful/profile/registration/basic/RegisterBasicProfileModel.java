@@ -6,12 +6,12 @@ import android.graphics.Point;
 import android.support.v4.app.Fragment;
 import android.view.Display;
 
-import com.example.home.makethembeautiful.contactedusers.ContactedUsersScreen;
+import com.example.home.makethembeautiful.contactedusers.ContactedUsersActivity;
 import com.example.home.makethembeautiful.servercommunication.RegisterToGcm;
-import com.example.home.makethembeautiful.gotoscreen.GoToScreen;
+import com.example.home.makethembeautiful.utils.handlers.GoToScreen;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.example.home.makethembeautiful.profile.registration.GenericSettingsModel;
-import com.example.home.makethembeautiful.profile.registration.company.SetCompanyScreen;
+import com.example.home.makethembeautiful.profile.registration.company.SetCompanyActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -73,7 +73,7 @@ public class RegisterBasicProfileModel extends GenericSettingsModel {
         registerToGcm.execute(); //get a GCM token
         saveInsertedDataToSharedPref();
         saveScreenSizesToSharedPref((Activity) getContext());
-        GoToScreen goToSetCompanyScreen = new GoToScreen((Activity) getContext(), SetCompanyScreen.class, "Creating Account...");
+        GoToScreen goToSetCompanyScreen = new GoToScreen((Activity) getContext(), SetCompanyActivity.class, "Creating Account...");
         goToSetCompanyScreen.onClick(null);
         getErrors().clear();
     }
@@ -85,7 +85,7 @@ public class RegisterBasicProfileModel extends GenericSettingsModel {
 
 
     public void goToNextScreen() {
-        Intent goToSetCompanyScreen = new Intent(getContext(), SetCompanyScreen.class);
+        Intent goToSetCompanyScreen = new Intent(getContext(), SetCompanyActivity.class);
         getContext().startActivity(goToSetCompanyScreen);
     }
 
@@ -99,7 +99,7 @@ public class RegisterBasicProfileModel extends GenericSettingsModel {
     private void checkIfAlreadySignedUp() {
         String userName = SharedPrefManager.getInstance(getContext()).getUserName();
         if (!userName.equals("user name error")) {
-            Intent goToSetContactedUsersScreen = new Intent(getContext(), ContactedUsersScreen.class);
+            Intent goToSetContactedUsersScreen = new Intent(getContext(), ContactedUsersActivity.class);
             getContext().startActivity(goToSetContactedUsersScreen);
         }
     }

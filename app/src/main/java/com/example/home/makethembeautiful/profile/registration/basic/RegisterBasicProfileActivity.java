@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.home.makethembeautiful.appinit.AppDataInit;
 
 
-public class RegisterBasicProfileScreen extends AppCompatActivity {
+public class RegisterBasicProfileActivity extends AppCompatActivity {
 
 
     @Override

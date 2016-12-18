@@ -9,17 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.home.makethembeautiful.chat.model.MessageItemsFromServer;
-import com.example.home.makethembeautiful.handlers.FragmentBuilder;
+import com.example.home.makethembeautiful.utils.handlers.FragmentBuilder;
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.model.ChatDataModel;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
 import com.example.home.makethembeautiful.chat.fragments.ChatFrag;
 import com.example.home.makethembeautiful.chat.controllers.ChatImagesController;
 import com.example.home.makethembeautiful.chat.controllers.ChatTextMessagesController;
-import com.example.home.makethembeautiful.imageutils.ChooseImageProvider;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
-import com.example.home.makethembeautiful.imageutils.fragments.FullScreenImageViewFrag;
+import com.example.home.makethembeautiful.utils.imageutils.ChooseImageProvider;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.fragments.FullScreenImageViewFrag;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
@@ -46,7 +46,7 @@ import java.util.concurrent.ExecutionException;
     * by the event bus
 */
 
-public class ChatScreen extends AppCompatActivity implements OnTextTransferred, ImageLoader, ChooseImageProvider {
+public class ChatActivity extends AppCompatActivity implements OnTextTransferred, ImageLoader, ChooseImageProvider {
     private static final String TAG = "Chat screen";
     private ChatFrag chatPresenter;
     private ChatTextMessagesController chatTextMessagesController;
@@ -58,7 +58,7 @@ public class ChatScreen extends AppCompatActivity implements OnTextTransferred, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_screen);
+        setContentView(R.layout.activity_chat);
         initActivity();
     }
 

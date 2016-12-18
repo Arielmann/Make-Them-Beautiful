@@ -14,8 +14,8 @@ import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersMod
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRow;
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRowsHashMap;
 import com.example.home.makethembeautiful.dbmanager.DataBaseManager;
-import com.example.home.makethembeautiful.imageutils.ImageLoader;
-import com.example.home.makethembeautiful.imageutils.ImageUtils;
+import com.example.home.makethembeautiful.utils.imageutils.ImageLoader;
+import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 import org.greenrobot.eventbus.EventBus;

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.example.home.makethembeautiful.chat.ChatScreen;
+import com.example.home.makethembeautiful.chat.ChatActivity;
 import com.example.home.makethembeautiful.dbmanager.DataBaseManager;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
@@ -38,7 +38,7 @@ public class OnContactedUserClicked implements View.OnClickListener{
         User addressedStylist = DataBaseManager.getInstance(context)
                 .getContactedStylistsReader().getUser(addressedUserName[0]);
 
-        Intent gotoChatScreen = new Intent(context, ChatScreen.class);
+        Intent gotoChatScreen = new Intent(context, ChatActivity.class);
         gotoChatScreen.setFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
         EventBus.getDefault().postSticky(addressedStylist);
         context.startActivity(gotoChatScreen);
