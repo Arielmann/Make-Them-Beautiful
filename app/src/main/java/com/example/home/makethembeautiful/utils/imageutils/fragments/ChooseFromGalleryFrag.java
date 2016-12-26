@@ -28,8 +28,8 @@ public class ChooseFromGalleryFrag extends Fragment implements Serializable {
             if (requestCode == RESULT_LOAD_IMAGE && resultCode == getActivity().RESULT_OK && null != data) {
                 Uri selectedImageUri = data.getData();
                 String senderName = SharedPrefManager.getInstance(getContext()).getUserName();
-                int[] imageSizes =   ImageUtils.chooseImageSizes(getActivity(), 2, 2);
-                ImageUtils.createBitmapFromImageSource(senderName, getActivity(), selectedImageUri, imageSizes[0], imageSizes[1]);
+                int squareImageSize = ImageUtils.chooseImageSizesForSquare(getActivity(), 2);
+                ImageUtils.createBitmapFromImageSource(senderName, getActivity(), selectedImageUri, squareImageSize, squareImageSize);
                 //Adding Image to array method occurs on parent class
             } else {
                 Toast.makeText(getActivity(), "You haven't picked an Image", Toast.LENGTH_LONG).show();

@@ -31,6 +31,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -177,6 +178,9 @@ public class MultiMessagesGcmService extends IntentService implements ImageLoade
     @Override
     public void onImageLoaded(String senderName, Bitmap scaledBitmap, ChatItem.ItemType itemType, Uri imageUri) {
         Uri finalImageUri = ImageUtils.createImageUri(this, scaledBitmap); //send uri of the final ROTATED image
+        String path = ImageUtils.getRealPathFromURI(getApplicationContext(), finalImageUri);
+        File imageFile = new File(path);
+        Log.d(TAG, "image file size: " + imageFile.length());
         imagesController.presentChatItemsOnScreen(senderName, scaledBitmap, finalImageUri, null, ChatItem.ItemType.IMAGE_LEFT);
     }
 }

@@ -59,10 +59,8 @@ class ChatImageViewHolder extends GenericViewHolder implements ImageLoader, OnIm
         if (imagePath != null) {
             File chatImageFile = new File(imagePath);
             chatImageFile.mkdir();
-            int[] imageSizes = ImageUtils.chooseImageSizes(context, 4, 4);
-            int targetImageHeight = imageSizes[0];
-            int targetImageWidth = imageSizes[1];
-            ImageUtils.createBitmapFromImageSource(position, context, this, chatImageFile, targetImageHeight, targetImageWidth);
+            int squareImageSize = ImageUtils.chooseImageSizesForSquare(context, 2);
+            ImageUtils.createBitmapFromImageSource(position, context, this, chatImageFile, squareImageSize, squareImageSize);
         }
     }
 
@@ -80,8 +78,8 @@ class ChatImageViewHolder extends GenericViewHolder implements ImageLoader, OnIm
     }
 
     private void setFullImageScreenOnClickListener(Bitmap image) {
-        int[] imageSizes = ImageUtils.chooseImageSizes(context, 2, 1);
-        Bitmap fullScreenImage = Bitmap.createScaledBitmap(image, imageSizes[0], imageSizes[1], false);
+        int squareImageSize = ImageUtils.chooseImageSizesForSquare(context, 1);
+        Bitmap fullScreenImage = Bitmap.createScaledBitmap(image, squareImageSize, squareImageSize, false);
         OnImageClickedListener onImageClicked = new OnImageClickedListener(context, fullScreenImage);
         chatImageView.setOnClickListener(onImageClicked);
     }

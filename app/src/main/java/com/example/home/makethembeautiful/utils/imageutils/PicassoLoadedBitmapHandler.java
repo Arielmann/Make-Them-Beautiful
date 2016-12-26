@@ -56,8 +56,8 @@ public abstract class PicassoLoadedBitmapHandler {
 
     protected void handleBitmap(Bitmap bitmap){
         Log.d("Loaded Bitmap Handler", "image loaded");
-        int[] imageSizes = ImageUtils.chooseImageSizes(context, 2, 2);
-        Bitmap finalBitmap = Bitmap.createScaledBitmap(bitmap, imageSizes[1], imageSizes[0], true);
+        int squareImageSize = ImageUtils.chooseImageSizesForSquare(context, 2);
+        Bitmap finalBitmap = Bitmap.createScaledBitmap(bitmap, squareImageSize, squareImageSize, true);
         Log.d("Loaded Bitmap Handler", "final image created");
         ImageLoader loader = this.loader;
         try {
