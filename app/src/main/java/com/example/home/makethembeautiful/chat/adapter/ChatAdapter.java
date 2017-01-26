@@ -11,10 +11,6 @@ import com.example.home.makethembeautiful.chat.model.ChatItem;
 
 import java.util.List;
 
-
-/**
- * Created by home on 6/28/2016.
- */
 public class ChatAdapter extends RecyclerView.Adapter<GenericViewHolder> {
 
     private List<ChatItem> dataSet;
@@ -43,7 +39,6 @@ public class ChatAdapter extends RecyclerView.Adapter<GenericViewHolder> {
         holder.setIsRecyclable(false);
         holder.setUIDataOnView(position);
     }
-
 
     @Override
     public int getItemViewType(int position) {

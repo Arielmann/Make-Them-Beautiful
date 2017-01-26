@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -16,8 +17,8 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.example.home.makethembeautiful.chat.adapter.GenericViewHolder;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
 import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRow;
-import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
+import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -36,6 +37,7 @@ import java.util.concurrent.ExecutionException;
  */
 public class ImageUtils {
 
+    private static final String TAG = ImageUtils.class.getName();
     public static String testImagePath = Environment.getExternalStorageDirectory() + "/DCIM/camera/me.jpg";
     public static final CharSequence[] chooseImageAlertBoxItems = {"Take Photo", "Choose from Gallery", "Cancel"};
     public static Bitmap defaultProfileImage;
@@ -245,7 +247,13 @@ public class ImageUtils {
         String fileNameWithSpace = "Contact_" + senderName + ".jpg";
         String finalFileName = fileNameWithSpace.replace(' ', '_');
         File newProfileImageFile = ImageUtils.createNewImageFile(profileImage, fileDirName, finalFileName);
-        addressedUser.setProfileImageFilePath(newProfileImageFile.getAbsolutePath());
+        try {
+            addressedUser.setProfileImageFilePath(newProfileImageFile.getAbsolutePath());
+        }catch(NullPointerException e){
+            e.printStackTrace();
+            Log.e(TAG, "Image file is null");
+        }
+
     }
 
     public static void fetchUserProfileImage(Context context, Object interfaceHolder) {
