@@ -14,8 +14,8 @@ import java.io.IOException;
  * Created by home on 5/25/2016.
  */
 public class RegisterToGcm extends AsyncTask<Void, Void, String> {
-    String REGISTER_GCM_TAG = "Register To Gcm: ";
-    Context context;
+    private String TAG = RegisterToGcm.class.getSimpleName();
+    private Context context;
 
     public RegisterToGcm(Context context) {
         this.context = context;
@@ -39,7 +39,7 @@ public class RegisterToGcm extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String gcmToken) {
         SharedPrefManager.getInstance(context).saveStringInfoToSharedPreferences(context, "gcmToken", gcmToken);
-        Log.d(REGISTER_GCM_TAG, "Token from shared prefrences: " + SharedPrefManager.getInstance(context).getUserGcmToken());
+        Log.d(TAG, "Token from shared preferences: " + SharedPrefManager.getInstance(context).getUserGcmToken());
 
     }
 }

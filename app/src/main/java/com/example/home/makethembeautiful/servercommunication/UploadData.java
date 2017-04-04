@@ -138,6 +138,6 @@ public class UploadData extends AsyncTask<Void, String, String> {
     @Override
     protected void onPostExecute(String imageUrl) {
         ((OnImageUploadedToServer) interfaceHolder).handleServerImageUrl(imageUrl, uploadImagePath, imageUri);
-        Log.d(TAG, "interface was activated with url: " + imageUrl);
+            Log.d(TAG, "interface was activated with url: " + imageUrl);
     }
 }

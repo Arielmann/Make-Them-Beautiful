@@ -77,7 +77,7 @@ public class SharedPrefManager {
         return insideSharedPref.getString("location", "location error");
     }
 
-    public String getCompanyWebsite() {
+    private String getCompanyWebsite() {
         return insideSharedPref.getString("website", "website error");
     }
 
@@ -85,11 +85,11 @@ public class SharedPrefManager {
         return insideSharedPref.getString("profileImageFilePath", "profile Image File Path error");
     }
 
-    public String getProfileImageUrl() {
+    private String getProfileImageUrl() {
         return insideSharedPref.getString("profileImageUrl", "profile Image Url error");
     }
 
-    public String getCompanyDescription() {
+    private String getCompanyDescription() {
         return insideSharedPref.getString("description", "description error");
     }
 
