@@ -5,7 +5,7 @@
     tools:context=".profile.registration.basic.RegisterBasicProfileActivity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/teal_bg"
+    android:background="@drawable/app_bg"
     android:fitsSystemWindows="true"
     >
 
