@@ -198,7 +198,6 @@ public class SharedPrefManager {
                 " Profile image file: " + getProfileImagePath() +
                 " Profile image url: " + getProfileImageUrl() +
                 " Gcm Token: " + getUserGcmToken() +
-
                 " Device details: " +
                 " Screen Height: " + getUserDeviceScreenHeight() +
                 " Screen Width: " + getUserDeviceScreenWidth();

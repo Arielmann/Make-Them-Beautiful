@@ -17,9 +17,6 @@ import com.example.home.makethembeautiful.profile.registration.SetViewsAfterSign
 
 import java.util.HashMap;
 
-/**
- * Created by home on 8/5/2016.
- */
 public class RegisterBasicProfileViewFrag extends GenericSettingsFrag implements View.OnClickListener, SetViewsAfterSignUpClicked {
     private static final String TAG = "SignUpFragment";
     private EditText nameEditText;

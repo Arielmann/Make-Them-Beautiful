@@ -16,15 +16,9 @@ import com.example.home.makethembeautiful.profile.registration.company.SetCompan
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by home on 6/6/2016.
- */
-public class RegisterBasicProfileModel extends GenericSettingsModel {
-    private String name;
-    private String password;
-    private String email;
+class RegisterBasicProfileModel extends GenericSettingsModel {
 
-    public RegisterBasicProfileModel(Fragment signUpView) {
+    RegisterBasicProfileModel(Fragment signUpView) {
         super(signUpView);
         checkIfAlreadySignedUp(); //check if the Stylist is already signed up
     }
@@ -33,9 +27,9 @@ public class RegisterBasicProfileModel extends GenericSettingsModel {
     public void validate(HashMap<String, String> userInputs) {
         //TODO: check if name OR email already exists in the server's DB
         setUserInputs(userInputs);
-        name = userInputs.get("name");
-        password = userInputs.get("password");
-        email = userInputs.get("email");
+        String name = userInputs.get("name");
+        String password = userInputs.get("password");
+        String email = userInputs.get("email");
 
 
         if (name.length() < 3) {
