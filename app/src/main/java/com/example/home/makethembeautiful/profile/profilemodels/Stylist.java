@@ -2,10 +2,9 @@ package com.example.home.makethembeautiful.profile.profilemodels;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
-/**
- * Created by home on 4/3/2016.
- */
+@Parcel
 public class Stylist extends User {
     private String company;
     private String website;
@@ -14,6 +13,10 @@ public class Stylist extends User {
         super(id, name, location, profileImageUrl, description, token);
         this.company = company;
         this.website = website;
+    }
+
+    //Parcel constructor
+    public Stylist() {
     }
 
     public String getCompany() {

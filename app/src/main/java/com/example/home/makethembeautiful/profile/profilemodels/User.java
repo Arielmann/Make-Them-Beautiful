@@ -4,11 +4,11 @@ import android.graphics.Bitmap;
 
 import com.example.home.makethembeautiful.utils.imageutils.ImageUtils;
 
+import org.parceler.Parcel;
+
 import java.io.Serializable;
 
-/**
- * Created by home on 4/14/2016.
- */
+@Parcel
 public class User implements Serializable {
 
     private int id;
@@ -29,6 +29,9 @@ public class User implements Serializable {
         this.description = description;
         this.gcmToken = token;
         this.userImageBitmap = ImageUtils.defaultProfileImage;
+    }
+    //Parcel constructor
+    public User() {
     }
 
     public String getGcmToken() {

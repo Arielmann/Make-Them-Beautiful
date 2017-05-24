@@ -14,9 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by home on 7/22/2016.
- */
 public class ContactedUsersModel {
 
 
@@ -34,7 +31,7 @@ public class ContactedUsersModel {
     private static ContactedUsersModel contactedUsersModel;
     private static List<ContactedUsersRow> dataSet = new ArrayList();
     private static Context context;
-    private static String TAG = "Contacted users model";
+    private static String TAG = ContactedUsersModel.class.getSimpleName();
 
     public static ContactedUsersModel getInstance(Context insideMethodContext) {
         if (contactedUsersModel == null) {

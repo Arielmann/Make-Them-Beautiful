@@ -2,6 +2,7 @@ package com.example.home.makethembeautiful.chat.controllers;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.util.Log;
 
 import com.example.home.makethembeautiful.chat.model.ChatDataModel;
 import com.example.home.makethembeautiful.chat.model.ChatItem;
@@ -10,11 +11,9 @@ import com.example.home.makethembeautiful.contactedusers.model.ContactedUsersRow
 import com.example.home.makethembeautiful.servercommunication.SendMessagePushNotification;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
-/**
- * Created by home on 7/8/2016.
- */
 public class ChatTextMessagesController extends IChatController {
     private static final String CHAT_TEXT_CONTROLLER_TAG = "Chat text controller";
+    private static final String TAG = ChatTextMessagesController.class.getSimpleName();
 
 
     /*
@@ -53,7 +52,10 @@ public class ChatTextMessagesController extends IChatController {
             ContactedUsersRowsHashMap.getInstance().getHashMap().get(addressedUserName).setLastMessageAsText(item);
             ContactedUsersRowsHashMap.getInstance().getHashMap().get(addressedUserName).setLastMessageDate(item);
             ContactedUsersModel.getInstance(model.getContext()).initDataSet();
-            ContactedUsersModel.getInstance(model.getContext()).getAdapter().notifyDataSetChanged();
+            if(ContactedUsersModel.getInstance(model.getContext()).getAdapter() == null) {
+                ContactedUsersModel.getInstance(model.getContext()).setAdapter();
+            }
+                ContactedUsersModel.getInstance(model.getContext()).getAdapter().notifyDataSetChanged();
 
         } else {
             User[] userInArray = new User[]{model.getAddressedUser()};

@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.home.makethembeautiful.chat.model.MessageItemsFromServer;
+import com.example.home.makethembeautiful.resources.AppStrings;
 import com.example.home.makethembeautiful.utils.handlers.FragmentBuilder;
 import com.example.home.makethembeautiful.R;
 import com.example.home.makethembeautiful.chat.model.ChatDataModel;
@@ -24,6 +26,7 @@ import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefMan
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 import org.greenrobot.eventbus.EventBus;
+import org.parceler.Parcels;
 
 import java.util.concurrent.ExecutionException;
 
@@ -53,13 +56,23 @@ public class ChatActivity extends AppCompatActivity implements OnTextTransferred
     private ChatImagesController chatImagesController;
     private User addressedUser;
     private ChatDataModel model;
-    private String CHAT_SCREEN_TAG = "Chat Screen";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        if(savedInstanceState != null){
+            User addressedUser = Parcels.unwrap(savedInstanceState.getParcelable(AppStrings.ADDRESSED_USER));
+            EventBus.getDefault().postSticky(addressedUser);
+        }
         initActivity();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Parcelable wrappedAddressedUser = Parcels.wrap(addressedUser);
+        outState.putParcelable(AppStrings.ADDRESSED_USER, wrappedAddressedUser);
     }
 
     @Override
@@ -67,6 +80,8 @@ public class ChatActivity extends AppCompatActivity implements OnTextTransferred
         super.onNewIntent(intent);
         initActivity();
     }
+
+
 
     private void initActivity() {
         addressedUser = EventBus.getDefault().removeStickyEvent(User.class);

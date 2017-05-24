@@ -12,9 +12,6 @@ import com.example.home.makethembeautiful.profile.profilemodels.User;
 
 import java.util.List;
 
-/**
- * Created by home on 8/23/2016.
- */
 public class ChatDataModel {
 
     private Context context;
