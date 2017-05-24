@@ -16,10 +16,6 @@ import com.example.home.makethembeautiful.servercommunication.UploadData;
 import com.example.home.makethembeautiful.profile.sharedprefrences.SharedPrefManager;
 import com.example.home.makethembeautiful.profile.profilemodels.User;
 
-/**
- * Created by home on 7/8/2016.
- */
-
 public class ChatImagesController extends IChatController implements OnImageUploadedToServer {
 
     /*
